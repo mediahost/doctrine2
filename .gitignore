@@ -1,0 +1,25 @@
+log/
+temp/
+tmp/
+purge/
+
+composer.lock
+
+vendor/bin/
+vendor/composer/
+vendor/dg/
+vendor/doctrine/
+vendor/kdyby/
+vendor/nette/
+vendor/symfony/
+vendor/autoload.php
+
+#################
+## NetBeans
+################
+nbproject/
+
+#################
+## PhpStorm
+################
+.idea
