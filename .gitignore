@@ -1,18 +1,38 @@
-log/
-temp/
-tmp/
-purge/
+#################
+## Log
+#################
+/log/*
+!/log/.htaccess
+!/log/web.config
 
+#################
+## Temp
+#################
+/temp/*
+!/temp/.htaccess
+!/temp/web.config
+
+#################
+## Config
+#################
+*.local.neon
+
+#################
+## Composer
+#################
 composer.lock
 
-vendor/bin/
-vendor/composer/
-vendor/dg/
-vendor/doctrine/
-vendor/kdyby/
-vendor/nette/
-vendor/symfony/
-vendor/autoload.php
+#################
+## Vendor (3rd side libs)
+################
+#vendor/bin/
+#vendor/composer/
+#vendor/dg/
+#vendor/doctrine/
+#vendor/kdyby/
+#vendor/nette/
+#vendor/symfony/
+#vendor/autoload.php
 
 #################
 ## NetBeans
@@ -23,3 +43,6 @@ nbproject/
 ## PhpStorm
 ################
 .idea
+
+tmp/
+purge/
