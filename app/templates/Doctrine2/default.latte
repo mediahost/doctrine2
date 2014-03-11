@@ -1,20 +1,26 @@
 
 {block content}
-<h1>Doctrine2Presenter</h1>
-<p>Example of loading raw data from database by Doctrine 2.</p>
+<h1 class="page-header">Doctrine2Presenter</h1>
+<p>Example of loading data from database by Doctrine 2. There are two methods of access. Getting data directly via Entity Manager is just for prototyping. Right way is using model classes.</p>
 
-<h2>Books</h2>
-<table>
-    <tr>
-        <th>ID</th>
-        <th>Title</th>
-        <th>Author</th>
-    </tr>
-    {foreach $books as $book}
+<h2>Books ({$count})</h2>
+<table class="table table-striped table-hover">
+    <thead>
         <tr>
-            <td>{$book->id}</td>
-            <td>{$book->title}</td>
-            <td>{$book->author->surname},&nbsp;{$book->author->firstname}</td>
+            <th>#</th>
+            <th>Title</th>
+            <th>Published</th>
+            <th>Author</th>
         </tr>
-    {/foreach}
+    </thead>
+    <tbody>
+        {foreach $books as $book}
+            <tr>
+                <td>{$book->id}</td>
+                <td>{$book->title}</td>
+                <td>{$book->published|date:'Y'}</td>
+                <td>{$book->author->surname},&nbsp;{$book->author->firstname}</td>
+            </tr>
+        {/foreach}
+    </tbody>
 </table>

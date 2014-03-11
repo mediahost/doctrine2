@@ -6,21 +6,20 @@
         "source": {
             "type": "git",
             "url": "https://github.com/nette/tester.git",
-            "reference": "0f8332a3d2979f094545b8083265c982e4a704a9"
+            "reference": "c318ca94b35ea4230d04f0208e107879b85ac01f"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/nette/tester/zipball/0f8332a3d2979f094545b8083265c982e4a704a9",
-            "reference": "0f8332a3d2979f094545b8083265c982e4a704a9",
+            "url": "https://api.github.com/repos/nette/tester/zipball/c318ca94b35ea4230d04f0208e107879b85ac01f",
+            "reference": "c318ca94b35ea4230d04f0208e107879b85ac01f",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.0"
         },
-        "time": "2014-03-06 13:12:56",
+        "time": "2014-03-08 22:47:46",
         "bin": [
-            "Tester/tester",
-            "Tester/coverage-report"
+            "Tester/tester"
         ],
         "type": "library",
         "extra": {
@@ -1176,6 +1175,91 @@
             "nette",
             "table",
             "tablegrid"
+        ]
+    },
+    {
+        "name": "rm/header",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/romanmatyus/Header.git",
+            "reference": "fabacda869716b4bc3a0448e9e84da86e6459bb6"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/romanmatyus/Header/zipball/fabacda869716b4bc3a0448e9e84da86e6459bb6",
+            "reference": "fabacda869716b4bc3a0448e9e84da86e6459bb6",
+            "shasum": ""
+        },
+        "require": {
+            "nette/nette": ">=2.0.5",
+            "php": ">=5.3.2"
+        },
+        "time": "2013-10-30 06:33:42",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "classmap": [
+                "AssetsCollector/",
+                "AssetsCollector/Compilers/",
+                "Header.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Roman Mátyus"
+            }
+        ],
+        "description": "Component for generating beuty and corect html header with only files where are realy required.",
+        "homepage": "https://github.com/romanmatyus/Header"
+    },
+    {
+        "name": "natxet/CssMin",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/natxet/CssMin.git",
+            "reference": "afdcdbdb5fc332313f47a79ae60346df3e69a572"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/natxet/CssMin/zipball/afdcdbdb5fc332313f47a79ae60346df3e69a572",
+            "reference": "afdcdbdb5fc332313f47a79ae60346df3e69a572",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.0"
+        },
+        "time": "2013-07-02 20:53:35",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "src/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Joe Scylla",
+                "email": "joe.scylla@gmail.com",
+                "homepage": "https://profiles.google.com/joe.scylla"
+            }
+        ],
+        "description": "Minifying CSS",
+        "homepage": "http://code.google.com/p/cssmin/",
+        "keywords": [
+            "css",
+            "minify"
         ]
     }
 ]

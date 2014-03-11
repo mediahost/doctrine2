@@ -20,7 +20,9 @@
         "dg/adminer-custom": "1.*",
         "kdyby/doctrine": "1.*",
         "janmarek/webloader": "2.2.0",
-        "o5/grido": "dev-master"
+        "o5/grido": "dev-master",
+        "rm/header": "dev-master",
+        "natxet/CssMin": "dev-master"
     },
     "require-dev": {
         "nette/tester": "1.1.*@dev"

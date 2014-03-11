@@ -1,5 +1,10 @@
-{block content}
-<h1>GridoPresenter</h1>
-<p>Example of loading data to Grido datagrid from database by Doctrine 2.</p>
+{block head}
+    {include parent}
+    {control cssGrido}
+{/block}
 
-{control grid}
+{block content}
+<h1 class="page-header">GridoPresenter</h1>
+<p>Example of loading data to Grido datagrid from database by Doctrine 2. Grid is a independent component injected to presenter by his factory. </p>
+
+{control gridBook}

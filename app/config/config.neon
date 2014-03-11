@@ -4,6 +4,10 @@
 # If you don't protect this directory from direct web access, anybody will be able to see your passwords.
 # http://nette.org/security-warning
 #
+includes:
+    - webloader.neon
+
+
 parameters:
 
 
@@ -32,8 +36,16 @@ extensions:
     doctrine: Kdyby\Doctrine\DI\OrmExtension
 
 services:
-    - App\UserManager
-    - App\RouterFactory
+    # Router
     router: @App\RouterFactory::createRouter
 
-    - App\Model\Articles(@doctrine.dao(App\Entities\Article))
+    # Model
+    - App\UserManager
+    - App\RouterFactory
+    - App\Model\BookModel(@doctrine.dao(App\Entities\Book))
+
+    # Presenters
+    #LocalBasePresenter:
+
+    # Components' factories
+    - App\Components\IGridBookControlFactory

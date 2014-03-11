@@ -14,12 +14,7 @@
 	<meta name="robots" content="{$robots}" n:ifset="$robots">
 
 	<title>{block title|striptags|upper}Nette Application Skeleton{/block}</title>
-
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="{$basePath}/css/grido.css"></script>
-    <link rel="stylesheet" media="screen,projection,tv" href="{$basePath}/css/typeahead.css">
-	<link rel="stylesheet" media="screen,projection,tv" href="{$basePath}/css/screen.css">
+    {control css}
 	<link rel="stylesheet" media="print" href="{$basePath}/css/print.css">
 	<link rel="shortcut icon" href="{$basePath}/favicon.ico">
 	{block head}{/block}
@@ -28,18 +23,26 @@
 <body>
 	<script> document.documentElement.className+=' js' </script>
 
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" n:href=":Homepage:">Sandbox</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li {ifCurrent Doctrine2:}class="active"{/ifCurrent}><a n:href="Doctrine2:">Doctrine 2</a></li>
+                <li {ifCurrent Grido:}class="active"{/ifCurrent}><a n:href="Grido:">Grido</a></li>
+            </ul>
+        </div>
+    </nav>
+    
 	<div n:foreach="$flashes as $flash" class="flash {$flash->type}">{$flash->message}</div>
 
-    <div class="container-fluid">
+    <div class="container">
         {include content}
     </div>
 
 	{block scripts}
-	<script src="{$basePath}/js/jquery.js"></script>
-	<script src="{$basePath}/js/netteForms.js"></script>
-    <script src="{$basePath}/js/nette.ajax.js"></script>
-	<script src="{$basePath}/js/main.js"></script>
-    <script src="{$basePath}/js/bootstrap.min.js"></script>
+    {control js}
     <script src="{$basePath}/js/grido.js"></script>
     <script src="{$basePath}/js/grido.ext.js"></script>
     <script src="{$basePath}/js/grido.ajax.js"></script>
